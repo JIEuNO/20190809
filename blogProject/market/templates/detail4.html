@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>제페토</title>
+</head>
+<body>
+    <div class="conatiner">
+        <h1> 상품이름: {{market.name}} </h1>
+        <p> 가격: {{market.price}} </p>
+        <p> 재고: {{market.num}} </p>
+        <p> 설명: {{market.sentence}} </p>
+        <p> 카테고리: {{market.category}} </p>
+        <p> 세부설명: {{market.description|safe}}</p>
+        <br><br>
+    </div>
+    <a href="{%url 'market'%}">글 목록</a>
+    <a href="{%url 'delete4' market.id %}">삭제</a>
+    
+</body>
+</html>
